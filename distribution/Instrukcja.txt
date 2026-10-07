@@ -1,0 +1,231 @@
+GAMEDOCK — INSTALACJA I OBSŁUGA
+Wersja paczki: 7 października 2026, Windows 11 x64
+
+Ta paczka zawiera gotowy GameDock.exe i jego środowisko uruchomieniowe.
+Na drugim komputerze nie trzeba instalować Pythona, PySide6 ani używać pip.
+Do instalacji i uruchomienia programu nie jest potrzebny Internet ani konto
+administratora. Same gry i ich launchery mogą wymagać Internetu.
+
+1. CO PRZENIEŚĆ NA DRUGI KOMPUTER
+
+Przenieś cały plik GameDock-Windows11-x64-2026-10-07.zip, np. na pendrivie.
+Paczka zawiera GameDock, a nie pliki gier ani tapetę. Zainstaluj swoje gry
+i wymagane launchery na drugim komputerze. Skróty muszą wskazywać na gry,
+które istnieją na tamtym komputerze.
+
+Wymagany system: Windows 11, 64-bitowy, komputer z procesorem Intel lub AMD.
+Paczka nie jest przeznaczona dla macOS, Linux ani 32-bitowego Windows.
+Środowisko uruchomieniowe oraz biblioteki są dołączone w folderze _internal.
+
+2. INSTALACJA — ZALECANY SPOSÓB
+
+1) Na drugim komputerze kliknij ZIP prawym przyciskiem i wybierz
+   „Wyodrębnij wszystkie…” / „Wypakuj wszystko”.
+2) Otwórz rozpakowany folder GameDock.
+3) Uruchom Zainstaluj.cmd dwukrotnym kliknięciem.
+4) Poczekaj na komunikat „GameDock jest zainstalowany w…”.
+5) Instalator otworzy GameDock. Aby zamknąć okno instalatora, naciśnij klawisz.
+
+Program zostanie skopiowany do:
+  %LOCALAPPDATA%\GameDock
+czyli zwykle:
+  C:\Users\TWOJA_NAZWA\AppData\Local\GameDock
+
+Powstaną skróty GameDock na pulpicie i w menu Start.
+Folder pobranej, rozpakowanej paczki można po instalacji usunąć.
+Autostart jest w tej paczce domyślnie wyłączony; włączasz go sam w ustawieniach.
+
+Nie uruchamiaj programu bezpośrednio z podglądu ZIP-a. Wypakuj cały folder.
+Nie kopiuj samego GameDock.exe: musi pozostać obok folderów _internal i assets.
+Instalator wywołuje dołączony install.ps1 przez PowerShell. Ustawienie polityki
+wykonania obowiązuje tylko dla tego uruchomienia instalatora.
+
+3. URUCHAMIANIE BEZ INSTALACJI
+
+Możesz uruchomić GameDock.exe prosto z rozpakowanego folderu GameDock.
+Zachowaj cały folder razem. Umieść go w miejscu, w którym możesz zapisywać
+pliki, np. w swoim folderze użytkownika; aplikacja zapisuje tam ustawienia
+i dziennik. Nie wybieraj Program Files ani folderu tylko do odczytu.
+
+Uruchamianie z pendrive'a jest możliwe, ale pendrive musi pozostać podłączony
+podczas działania aplikacji. Przy włączonym autostarcie folder powinien
+pozostać na dysku komputera w stałej lokalizacji.
+
+Ponowne kliknięcie GameDock.exe pokaże już działający panel.
+
+4. JAK DODAĆ I ZOBACZYĆ GRY
+
+GameDock odczytuje rzeczywisty pulpit Windows i co sekundę sprawdza zmiany.
+Skróty rozpoznanych gier pojawiają się automatycznie. Programy biurowe,
+instalatory, foldery i ikony systemowe są pomijane.
+
+Najłatwiej utwórz skrót gry na pulpicie w jej launcherze.
+Jeśli gra nie została rozpoznana lub jej skrót jest poza pulpitem:
+  • Otwórz panel GameDock.
+  • Kliknij prawym przyciskiem puste miejsce w panelu.
+  • Wybierz „Dodaj grę…”.
+  • Wskaż skrót .lnk / .url lub plik .exe gry.
+
+Preferuj oryginalny skrót gry: zachowuje argumenty i katalog roboczy.
+Dodanie gry nie kopiuje jej plików ani nie przenosi oryginalnego skrótu.
+Zwykle zmiany listy pojawiają się w ciągu 1–2 sekund. F5 odświeża ręcznie.
+
+Opcjonalnie utwórz folder Shortcuts obok GameDock.exe, umieść w nim skróty
+gier i zaznacz w Ustawieniach „Dołącz skróty z folderu GameDock”.
+
+5. WYGLĄD I OBSŁUGA
+
+Panel ma bezbarwne, przezroczyste tło z lekkim przyciemnieniem (28%).
+Pokazuje ikony i nazwy gier. Nie ma przycisku X ani napisu w lewym górnym
+rogu. Pasek przewijania pozostaje niewidoczny; przewijanie nadal działa.
+Tapeta widoczna za panelem pochodzi z komputera, na którym działa GameDock.
+Przy wyłączonych efektach przezroczystości Windows tło może być nieprzezroczyste.
+
+Kliknij mały przycisk „Gry” na pulpicie lub ikonę GameDock obok zegara.
+Jedno kliknięcie ikony gry otwiera jej oryginalny skrót. Po poprawnym
+przekazaniu uruchomienia do Windows panel się chowa. Nie oznacza to jeszcze,
+że launcher gry skończył ładowanie.
+
+Prawy przycisk na pustym miejscu: wyszukiwanie, filtr ulubionych, sortowanie,
+widok siatki/listy, zaznaczanie, dodawanie gier i Ustawienia.
+Prawy przycisk na grze: otwarcie, ulubione, właściwości, lokalizacja,
+usunięcie z listy i ewentualnie zarządzanie samym skrótem.
+
+Skróty klawiaturowe:
+  Esc        — schowaj wyszukiwanie; wyjdź z zaznaczania; potem schowaj panel.
+  Ctrl+F     — pokaż wyszukiwanie.
+  Strzałki   — przechodź między grami.
+  Enter      — otwórz aktualną grę.
+  Spacja     — zaznacz grę do działań na wielu pozycjach.
+  Ctrl+A     — zaznacz widoczne gry; w polu wyszukiwania zaznacza tekst.
+  F2         — zmień nazwę skrótu, gdy działanie jest dostępne.
+  Delete     — usuń grę z listy GameDock; nie kasuje plików gry.
+  F5         — odśwież listę i ikony.
+  Shift+F10  — menu aktualnej gry.
+  Page Up / Page Down — przewijanie; działa także kółko myszy.
+
+Gdy trwa operacja plikowa, Esc nie chowa panelu.
+Panel możesz przesuwać, chwytając jego pusty górny obszar, oraz zmieniać
+rozmiar, chwytając krawędź. Dostosowuje się do obszaru monitora.
+
+Przycisk „Gry” na pulpicie możesz przeciągnąć. W menu Ustawienia dostępne
+jest „Zablokuj pozycję przycisku” i „Przycisk na pulpicie”.
+Przycisk znajduje się pod oknami aplikacji. Ikona przy zegarze pozostaje
+dostępna także podczas przywracania przycisku po restarcie Eksploratora.
+
+6. AUTOSTART I ZAMYKANIE
+
+Autostart:
+  prawy przycisk na tle panelu → Ustawienia → Uruchamiaj z Windows.
+Odznacz tę opcję, aby wyłączyć autostart.
+Przy autostarcie panel nie otwiera się sam; dostępne są przycisk i zasobnik.
+
+Esc chowa panel, ale GameDock nadal pracuje w tle.
+Aby całkowicie zamknąć program: prawy przycisk na jego ikonie obok zegara
+→ Zamknij GameDock. Jeśli ikony nie widać, sprawdź strzałkę ukrytych ikon.
+
+7. USUWANIE Z LISTY I OPERACJE NA SKRÓTACH
+
+„Usuń z listy gier” i klawisz Delete ukrywają pozycję w GameDock.
+Nie odinstalowują gry i nie usuwają skrótu z pulpitu.
+Ponowne „Dodaj grę…” przywraca daną pozycję. Ustawienia mogą też zawierać
+„Przywróć gry usunięte z listy”.
+
+Podmenu „Zarządzaj skrótem” dotyczy pliku skrótu: można go np. skopiować,
+przenieść, zmienić nazwę lub przenieść do Kosza. Windows pokazuje swoje
+dialogi konfliktów i uprawnień. Przed operacją sprawdź jej treść.
+Usunięcie skrótu do Kosza jest innym działaniem niż usunięcie z listy.
+
+8. USTAWIENIA, KOPIA ZAPASOWA I AKTUALIZACJA
+
+config.json — ustawienia tej instalacji: wygląd, pozycja przycisku,
+autostart, ulubione i ręcznie dodane gry.
+logs\gamedock.log — dziennik diagnostyczny.
+Shortcuts — opcjonalne dodatkowe skróty.
+_internal — wymagane środowisko uruchomieniowe; zachowaj cały folder.
+assets — ikona aplikacji; zachowaj cały folder.
+licenses — informacje i licencje dołączonych bibliotek.
+Zrodla_GameDock.zip — kod programu i testy dla osoby, która chce go rozwijać.
+
+Aby zrobić kopię ustawień, zamknij GameDock z zasobnika i skopiuj config.json
+oraz własny folder Shortcuts. Paczka instalacyjna ma czyste ustawienia.
+Nie przenosi ulubionych i ścieżek gier z komputera autora.
+Stare ścieżki mogą nie działać na innym komputerze; dodaj tam gry ponownie.
+
+Aktualizacja:
+1) Zamknij GameDock z zasobnika.
+2) Zrób kopię config.json i folderu Shortcuts.
+3) Wypakuj nową paczkę do innego folderu.
+4) Uruchom z niej Zainstaluj.cmd.
+Instalator zachowa istniejący config.json oraz własny folder Shortcuts.
+Jeśli chcesz ręcznie przenieść folder aplikacji, najpierw wyłącz autostart,
+zamknij GameDock, przenieś cały folder i w nowym miejscu ponownie włącz autostart.
+
+9. ODINSTALOWANIE
+
+1) Zamknij GameDock z zasobnika.
+2) Otwórz folder faktycznej instalacji, zwykle %LOCALAPPDATA%\GameDock.
+3) Uruchom znajdujący się TAM plik Odinstaluj.cmd.
+4) Usunie on skróty i autostart wskazujące na tę instalację.
+5) Usuń cały folder aplikacji, aby usunąć program, ustawienia i dzienniki.
+
+Gry oraz ich oryginalne skróty pozostają na komputerze.
+W trybie bez instalacji działa ta sama procedura w używanym folderze.
+
+10. JEŚLI COŚ NIE DZIAŁA
+
+Program się nie otwiera / brak DLL / błąd platformy Qt:
+  Wypakuj ponownie CAŁY ZIP. GameDock.exe musi być obok _internal i assets.
+  Nie podmieniaj pojedynczych bibliotek między różnymi wersjami paczki.
+  Uruchom Sprawdz.cmd. Raport zostanie w logs\sprawdzenie.txt.
+
+Windows wyświetla komunikat o nierozpoznanej aplikacji:
+  EXE nie ma płatnego podpisu wydawcy. Sprawdź, czy to Twoja otrzymana paczka.
+  Jeśli chcesz ją uruchomić i Windows udostępnia tę możliwość, użyj
+  „Więcej informacji” → „Uruchom mimo to”. Nie wyłączaj antywirusa.
+  Na zarządzanym komputerze instalacja może wymagać decyzji administratora.
+
+Instalator nie działa z powodu polityki firmowej:
+  Jeśli polityka pozwala na uruchamianie programu, możesz użyć GameDock.exe
+  z całego rozpakowanego folderu. W innym przypadku skontaktuj się z administratorem.
+
+Nie widać żadnych gier:
+  Utwórz ich skróty na pulpicie lub użyj „Dodaj grę…”. Sam launcher Steam
+  albo Epic Games nie jest grą. Ustaw filtr „Wszystkie gry” i wyczyść szukanie.
+  Program nie skanuje automatycznie wszystkich dysków i bibliotek launcherów.
+
+Gra nie uruchamia się:
+  Sprawdź jej oryginalny skrót w Windows. Gra i wymagany launcher muszą być
+  zainstalowane. Skrót skopiowany z innego PC może mieć niewłaściwą ścieżkę.
+
+Nie widać przycisku „Gry”:
+  Uruchom GameDock.exe lub otwórz program z ikony obok zegara.
+  W Ustawieniach zaznacz „Przycisk na pulpicie”. Po restarcie Eksploratora
+  odczekaj kilka sekund na przywrócenie osadzenia.
+
+Tło nie jest przezroczyste:
+  Sprawdź Ustawienia Windows → Ułatwienia dostępu → Efekty wizualne
+  → Efekty przezroczystości. Wyłączony efekt może włączyć tło nieprzezroczyste.
+
+Nie zapisują się ustawienia:
+  Użyj instalacji w %LOCALAPPDATA%\GameDock albo innego zapisywalnego folderu.
+
+Pomoc w diagnozie:
+  Uruchom Sprawdz.cmd, a następnie odczytaj logs\sprawdzenie.txt
+  i logs\gamedock.log. Diagnostyka sprawdza biblioteki, odczyt pulpitu,
+  próbkę ikon i dostęp do mechanizmu Windows IFileOperation.
+  Nie uruchamia gier i nie wykonuje operacji na Twoich plikach.
+
+11. SPRAWDZENIE POPRAWNEJ INSTALACJI
+
+• Panel otwiera się z przycisku i ikony obok zegara.
+• Widać wyłącznie rozpoznane lub ręcznie dodane gry.
+• Nie ma napisu w narożniku, przycisku X ani widocznego paska przewijania.
+• Esc chowa panel. Prawy przycisk otwiera ustawienia.
+• Jedno kliknięcie uruchamia grę.
+• Po dodaniu lub zmianie nazwy skrótu lista odświeża się po chwili.
+• Po ponownym uruchomieniu pozostają ustawienia i pozycja przycisku.
+
+Wersję EXE sprawdzono po skopiowaniu do oddzielnego folderu na komputerze
+tworzącym paczkę. Rzeczywisty drugi komputer może mieć inne ustawienia
+Windows, sterowniki i ograniczenia konta; powyższa lista służy do odbioru.

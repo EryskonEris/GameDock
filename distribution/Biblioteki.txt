@@ -1,0 +1,39 @@
+GAMEDOCK — DOŁĄCZONE BIBLIOTEKI I KOD ŹRÓDŁOWY
+
+Środowisko tej paczki:
+  Python 3.14.6 — https://www.python.org/
+  Qt / PySide6 / Shiboken6 6.11.2 — https://www.qt.io/qt-for-python
+  pywin32 312 — https://github.com/mhammond/pywin32
+  Pillow 12.3.0 — https://python-pillow.org/
+  Bootloader PyInstaller 6.22.3 — https://pyinstaller.org/
+
+Pełne teksty licencji, informacje o autorach i przypisania komponentów są
+w folderze licenses. Biblioteki dostarczono bez modyfikacji ich kodu.
+Qt/PySide6/Shiboken korzystają z dostępnych licencji open source; pełne
+teksty LGPL/GPL i wyjątków są dołączone z odpowiadających źródeł.
+Zachowaj te informacje przy przekazywaniu dalej kompletnej paczki.
+
+Źródła używanych bibliotek Qt/PySide6 6.11.2 znajdują się w licenses\sources:
+  qtbase-6.11.2.tar.gz — Core, Gui, Widgets, Network, OpenGL, platformy
+  qtsvg-6.11.2.tar.gz — obsługa SVG
+  qtimageformats-6.11.2.tar.gz — dodatkowe formaty obrazów
+  pyside-setup-6.11.2.tar.gz — PySide6 i Shiboken6
+
+Repozytoria upstream:
+  https://github.com/qt/qtbase/tree/v6.11.2
+  https://github.com/qt/qtsvg/tree/v6.11.2
+  https://github.com/qt/qtimageformats/tree/v6.11.2
+  https://github.com/qtproject/pyside-pyside-setup/tree/v6.11.2
+Instrukcje budowania:
+  https://doc.qt.io/qt-6/build-sources.html
+  https://doc.qt.io/qtforpython-6/building_from_source/windows.html
+
+Biblioteki są oddzielnymi plikami DLL/PYD w _internal; można je zastąpić
+własnymi zgodnymi kompilacjami. Zachowaj zgodność ABI, wersji Pythona,
+architektury x64 i wymaganych modułów. Modyfikowanie bibliotek i analiza
+programu w celu debugowania zmian tych bibliotek nie są ograniczane
+przez tę paczkę.
+
+Kod aplikacji wraz z testami i sposobem ponownego zbudowania EXE jest
+w Zrodla_GameDock.zip. Gotowy instalator nie wymaga tych źródeł do działania.
+Użycie i dalsza dystrybucja bibliotek podlegają ich dołączonym licencjom.

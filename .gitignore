@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+logs/
+icon_cache/
+.config-*.json
+build/
+releases/
+config.json
+stdout.log
+stderr.log
+Shortcuts/*
+!Shortcuts/.gitkeep
