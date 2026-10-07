@@ -6,7 +6,9 @@ nie pojawiają się w panelu.
 
 ## Uruchamianie
 
-Gotowa paczka na drugi komputer: `releases/GameDock-Windows11-x64-2026-10-07.zip`.
+Gotowa paczka na drugi komputer: `releases/GameDock-Windows11-x64-2026-10-07.zip`,
+do pobrania także z wydania na GitHubie:
+https://github.com/EryskonEris/GameDock/releases/tag/v2026-10-07
 Wypakuj cały ZIP i uruchom `Zainstaluj.cmd` albo bezpośrednio `GameDock.exe`.
 Ta wersja zawiera własne środowisko; nie wymaga instalowania Pythona.
 Pełna instrukcja jest w paczce jako `Instrukcja.txt` oraz w `distribution/Instrukcja.txt`.
